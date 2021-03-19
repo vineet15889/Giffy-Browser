@@ -15,6 +15,11 @@
 		080250F426048E8100FCB7C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080250F226048E8100FCB7C1 /* LaunchScreen.storyboard */; };
 		080250FF26048E8100FCB7C1 /* Giffy_BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080250FE26048E8100FCB7C1 /* Giffy_BrowserTests.swift */; };
 		0802510A26048E8100FCB7C1 /* Giffy_BrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802510926048E8100FCB7C1 /* Giffy_BrowserUITests.swift */; };
+		080251232604941300FCB7C1 /* RESTNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802511E2604941200FCB7C1 /* RESTNetworkRequest.swift */; };
+		080251242604941300FCB7C1 /* GiffyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802511F2604941200FCB7C1 /* GiffyModel.swift */; };
+		080251252604941300FCB7C1 /* AutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080251202604941200FCB7C1 /* AutoComplete.swift */; };
+		080251262604941300FCB7C1 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080251212604941200FCB7C1 /* Trie.swift */; };
+		080251272604941300FCB7C1 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080251222604941200FCB7C1 /* Query.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		0802510526048E8100FCB7C1 /* Giffy BrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Giffy BrowserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0802510926048E8100FCB7C1 /* Giffy_BrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Giffy_BrowserUITests.swift; sourceTree = "<group>"; };
 		0802510B26048E8100FCB7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0802511E2604941200FCB7C1 /* RESTNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTNetworkRequest.swift; sourceTree = "<group>"; };
+		0802511F2604941200FCB7C1 /* GiffyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiffyModel.swift; sourceTree = "<group>"; };
+		080251202604941200FCB7C1 /* AutoComplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoComplete.swift; sourceTree = "<group>"; };
+		080251212604941200FCB7C1 /* Trie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		080251222604941200FCB7C1 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,10 @@
 		080250E626048E7D00FCB7C1 /* Giffy Browser */ = {
 			isa = PBXGroup;
 			children = (
-				080250E726048E7D00FCB7C1 /* AppDelegate.swift */,
-				080250E926048E7D00FCB7C1 /* SceneDelegate.swift */,
-				080250EB26048E7D00FCB7C1 /* ViewController.swift */,
-				080250ED26048E7D00FCB7C1 /* Main.storyboard */,
-				080250F026048E8000FCB7C1 /* Assets.xcassets */,
-				080250F226048E8100FCB7C1 /* LaunchScreen.storyboard */,
+				0802512E2604947900FCB7C1 /* Supporting files */,
+				0802512C2604945700FCB7C1 /* Controller */,
+				0802512B2604942300FCB7C1 /* Model */,
+				0802512D2604946700FCB7C1 /* View */,
 				080250F526048E8100FCB7C1 /* Info.plist */,
 			);
 			path = "Giffy Browser";
@@ -126,6 +134,45 @@
 				0802510B26048E8100FCB7C1 /* Info.plist */,
 			);
 			path = "Giffy BrowserUITests";
+			sourceTree = "<group>";
+		};
+		0802512B2604942300FCB7C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0802511F2604941200FCB7C1 /* GiffyModel.swift */,
+				080251222604941200FCB7C1 /* Query.swift */,
+				0802511E2604941200FCB7C1 /* RESTNetworkRequest.swift */,
+				080251202604941200FCB7C1 /* AutoComplete.swift */,
+				080251212604941200FCB7C1 /* Trie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0802512C2604945700FCB7C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				080250EB26048E7D00FCB7C1 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0802512D2604946700FCB7C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				080250ED26048E7D00FCB7C1 /* Main.storyboard */,
+				080250F226048E8100FCB7C1 /* LaunchScreen.storyboard */,
+				080250F026048E8000FCB7C1 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0802512E2604947900FCB7C1 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				080250E926048E7D00FCB7C1 /* SceneDelegate.swift */,
+				080250E726048E7D00FCB7C1 /* AppDelegate.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080251232604941300FCB7C1 /* RESTNetworkRequest.swift in Sources */,
+				080251252604941300FCB7C1 /* AutoComplete.swift in Sources */,
 				080250EC26048E7D00FCB7C1 /* ViewController.swift in Sources */,
+				080251262604941300FCB7C1 /* Trie.swift in Sources */,
+				080251272604941300FCB7C1 /* Query.swift in Sources */,
 				080250E826048E7D00FCB7C1 /* AppDelegate.swift in Sources */,
+				080251242604941300FCB7C1 /* GiffyModel.swift in Sources */,
 				080250EA26048E7D00FCB7C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H39RMB9UU;
 				INFOPLIST_FILE = "Giffy Browser/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H39RMB9UU;
 				INFOPLIST_FILE = "Giffy Browser/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

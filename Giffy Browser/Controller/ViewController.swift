@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import SwiftyGif
+import SDWebImage
+import FLAnimatedImage
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     @IBOutlet weak var collectionGrid: UICollectionView!
@@ -30,6 +31,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         flowlayout.minimumLineSpacing = 2
         flowlayout.scrollDirection = .vertical
         collectionGrid.collectionViewLayout = flowlayout
+        collectionGrid.register(UINib(nibName: "GiffyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GiffyCollectionViewCell")
     }
     
     //Tableview Delegate and datasource
@@ -39,13 +41,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! GiffyCollectionViewCell
-        cell.gifImage.image = nil;
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GiffyCollectionViewCell", for: indexPath) as! GiffyCollectionViewCell
         cell.contentView.backgroundColor = .blue
         let url = URL(string: self.gifData[indexPath.row].images.original.url)
-        let loader = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-        cell.gifImage.setGifFromURL(url!, customLoader: loader)
-
+        cell.gifImage.sd_setImage(with: url)
+        cell.contentView.layoutIfNeeded()
+        cell.layoutSubviews()
         return cell
     }
     
@@ -63,10 +64,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             self.perform(query: "", offset: self.offsset, pageSize: 25)
         }
     }
-    
-    
-    
-
+ 
     // Helper method
     
     fileprivate func perform(query: String, offset: Int, pageSize: Int) {
@@ -118,6 +116,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 self.perform(query: "", offset: self.offsset, pageSize: 25)
             })
         })
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: {})
+        })
+        alert.addAction(okAction)
         alert.addAction(retryAction)
         self.present(alert, animated: true, completion: {})
     }

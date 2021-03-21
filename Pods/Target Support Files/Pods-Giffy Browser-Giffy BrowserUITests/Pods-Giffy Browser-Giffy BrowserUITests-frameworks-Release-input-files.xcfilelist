@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Giffy Browser-Giffy BrowserUITests/Pods-Giffy Browser-Giffy BrowserUITests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework
+${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

@@ -4,7 +4,8 @@
 target 'Giffy Browser' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-pod 'SwiftyGif'
+pod 'SDWebImage'
+pod 'FLAnimatedImage'
   # Pods for Giffy Browser
 
   target 'Giffy BrowserTests' do

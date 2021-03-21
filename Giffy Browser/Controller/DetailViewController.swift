@@ -17,8 +17,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = URL(string: gifURL)
-        let loader = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-        gifImage.setGifFromURL(url!, customLoader: loader)
+        gifImage.sd_setImage(with: url)
         if slug != nil {
             gifName.text = slug
         }
